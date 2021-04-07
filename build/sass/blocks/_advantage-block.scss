@@ -1,0 +1,16 @@
+
+.advantage-block{ text-align: center; max-width: 280px; margin: 0 auto;
+	&__img{ margin-bottom: 25px;}
+	&__title{ font: bold 25px/32px $family; margin-bottom: 20px; }
+	//&__text{ font: 19px/32px $family; }
+
+	@include media($lg){
+		&__title{ font: bold 22px/30px $family; }
+	}
+	@include media($md){
+		&__title{ font: bold 20px/26px $family; }	
+	}
+	@include media($xs){
+		//&__title{ font: bold 22px/30px $family; }
+	}
+}

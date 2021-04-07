@@ -1,0 +1,8 @@
+
+.user-info{ @include flex(flex-end,center,center,nowrap,row-reverse);
+	&__img{ margin-left: 15px; 
+		img{ width: 80px; height: 80px; border-radius: 50%; display: block; border: 10px #e8ecf2 solid; object-fit: cover;  }
+	}
+	&__name{ text-align: right; font: bold 18px $family; color: $blue; margin-bottom: 10px; }
+	&__id{ text-align: right; font: bold 14px $family; color: #a3a3c4; }
+}

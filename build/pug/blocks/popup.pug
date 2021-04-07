@@ -1,0 +1,14 @@
+
+mixin popup(data)
+	if(data != undefined && data.sfx != undefined)
+		- var classes = ['popup--'+data.sfx]
+
+	.popup-wrap(class = 'popup-wrap--'+data.sfx, id = data.id)
+		.popup-wrap__overflow.js-popup-close
+
+		.popup(class = classes)
+			a.popup__close.js-popup-close(href="#")
+				svg.icon
+					use(xlink:href="images/sprite.svg#icon-close")
+
+			block

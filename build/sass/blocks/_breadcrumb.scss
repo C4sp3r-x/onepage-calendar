@@ -1,0 +1,23 @@
+
+.breadcrumb{ @include flex(); 
+	&__item{ font: 17px $family; color: #7e7e7e; margin-right: 10px;
+		a{ text-decoration: none; color: #2a2828; }
+		//&.active{ font-weight: bold; }
+		&:after{ content: "/"; margin-left: 10px; }
+
+		&:last-child{ margin-right: 0; 
+			&:after{ display: none; }
+		}
+	}
+	//&__sep{ margin: 0 5px; font: 300 14px $family; color: $grey;  }
+
+	@include media($lg){
+		&__item{ font: 16px $family; }
+	}
+	@include media($md){
+		&__item{ font: 15px $family; }
+	}
+	@include media($xs){
+		&__item{ font: 14px $family; }
+	}
+}

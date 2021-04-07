@@ -1,0 +1,10 @@
+
+.address-block{
+	&__marker{ @include flex(); font: bold 14px $family; margin-bottom: 35px;
+		p{ margin-left: 3rem; 
+			&:first-child{ margin-left: 0; }
+		}
+	}
+	&__text{ margin-bottom: 20px; }
+	&__time{ font-weight: bold; }
+}

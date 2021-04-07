@@ -1,0 +1,26 @@
+
+.comments-page{
+	&__title{ text-align: center; margin-bottom: 40px; }
+	&__tabs{ margin-bottom: 70px; }
+	&__list{ margin-bottom: -80px; }
+	&__item{ margin-bottom: 80px; }
+	&__pagination{ padding-top: 60px; text-align: center; }
+	&__bottom-info{ text-align: center; margin-top: 80px; 
+		&__title{ margin-bottom: 25px; line-height: 1.3; }
+		&__text{}
+	}
+
+	@include media($sm){
+		&__wrap{ max-width: 670px; margin: 0 auto; }
+		&__tabs{ margin-bottom: 50px; }
+		&__list{ margin-bottom: -60px; }
+		&__item{ margin-bottom: 60px; }
+		&__pagination{ padding-top: 50px; }
+		&__bottom-info{ margin-top: 60px; }
+	}
+
+	@include media($xs){
+		&__row{ margin-bottom: -80px; }
+		&__item{ margin-bottom: 80px; }
+	}
+}

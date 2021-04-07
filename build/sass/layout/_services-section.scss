@@ -1,0 +1,39 @@
+
+.services-section{ padding: 80px 0; 
+	&__slider{ padding-right: 70px; }
+	&__img{ padding-right: 60px; }
+	&__title{ font: bold 38px $family; margin-bottom: 20px; }
+	&__text{ color: #373137; /* font: 19px/24px $family; */ margin-bottom: 30px; }
+
+	.slick-slide{ opacity: 0; @include time(); 
+		&.slick-current{ opacity: 1; }
+	}
+
+	@include media($lg){
+		&__title{ font: bold 34px $family; }
+	}
+	@include media($md){
+		&__img{ padding-right: 15px; }
+		&__slider{ padding-right: 60px; }
+		&__title{ font: bold 30px $family; }
+		//&__text{ font: 16px/20px $family; }
+	}
+
+	@include media($sm){
+		&__img{ margin-bottom: 50px; text-align: center; 
+			img{ display: block; margin: 0 auto; }
+		}
+	}
+
+	@include media($xs){ padding: 60px 0;
+		&__slider{ padding-right: 0px; }
+		&__title{ text-align: center; font: bold 26px $family; }
+		&__text{ text-align: center; }
+		&__buttons{ text-align: center; }
+	}
+
+	@include media($xxs){ 
+		&__title{ font: bold 24px $family; }
+		//&__text{ font-size: 14px; }
+	}
+}

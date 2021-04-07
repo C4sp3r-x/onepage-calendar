@@ -1,0 +1,15 @@
+
+.other-artists-section{ padding: 70px 0 0;
+	&__title{ text-align: center; margin-bottom: 30px; }
+	&__row{ margin: 0 -10px -20px; }
+	&__item{ margin-bottom: 20px; padding: 0 10px; }
+	&__buttons{ margin-top: 40px; text-align: center; }
+
+	@include media($xs){
+		&__row{ margin: 0 -5px -20px; }
+		&__item{ padding: 0 5px; }
+		&__buttons{ margin-top: 20px; 
+			.btn{ padding-left: 15px; padding-right: 15px; }
+		}
+	}
+}

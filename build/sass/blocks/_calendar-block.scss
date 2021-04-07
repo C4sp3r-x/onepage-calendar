@@ -1,0 +1,54 @@
+
+.calendar-block{ background: $white; border-radius: 15px; overflow: hidden; padding-bottom: 20px; 
+	
+
+	&__hour{ @include flex(0,stretch,stretch,nowrap); box-shadow: 0 0 15px rgba($blue,.2);
+		&-icon{ border-right: 2px #e8ecf3 solid; @include flex(center,center,center); flex: 0 0 7.692%; max-width: 7.692%; 
+			svg{ fill: $blue; width: 30px; height: 30px; display: block; }
+		}
+		&-item{ border-right: 2px #e7eaf2 dashed; position: relative; min-height: 70px; flex: 0 0 7.692%; max-width: 7.692%; 
+			span{ background: $white; position: absolute; bottom: 50%; right: 0; transform: translate(50%,50%); padding: 5px 0; color: #eceff5; font: 20px $family; text-align: center; display: block; }
+
+			&--point{
+				span{ color: $blue; font-size: 18px; /* bottom: 10px; */  }
+			}
+			&--last{ border: 0;
+				span{ transform: translate(0,50%); right: 10px; }
+			}
+		}
+	}
+	&__row{ @include flex(0,stretch,stretch,nowrap); position: relative; }
+	&__time{ flex: 0 0 7.692%; max-width: 7.692%; @include flex(center,flex-end,flex-end); font: bold 18px/1 $family; color: $black; position: relative; border-right: 2px #e7eaf2 dashed; border-bottom: 2px #e7eaf2 dashed;
+		&:after{ content: ""; display: block; width: 90%; height: 2px; bottom: -2px; left: 0; position: absolute; background: $white; }
+	}
+	&__item{ border-right: 2px #e7eaf2 dashed; border-bottom: 2px #e7eaf2 dashed; min-height: 80px; flex: 0 0 7.692%; max-width: 7.692%; 
+		&:last-child{ border-right: 0; }
+
+		&--current{ background: #f3f5f8; }
+	}
+
+	&__lesson{ position: absolute; top: 50%; right: 0; left: 0; transform: translateY(calc(-50% - 1px)); background: #cfdcf2; border: 1px $white solid; border-radius: 30px; padding: 5px 20px 5px 5px; @include flex(space-between,center,center,nowrap); min-height: 52px;
+		&-icon{ width: 40px; height: 40px; flex: 0 0 auto; border-radius: 50%; background: #93c0ff; color: $white; @include flex(center,center,center); text-align: center; font: bold 18px $family; margin-right: 15px; 
+			svg{ stroke: $white; fill: $white; width: 20px; }
+			img{ width: 24px; }
+		}
+		&-title{ font: bold 16px $family; color: $black; flex: 1 1 auto; }
+		&-time{ white-space: nowrap; font: 16px $family; color: $black; text-align: right; margin-left: 20px; }
+
+		&--no-end{ border-radius: 30px 0 0 30px; }
+		&--no-end &{
+			&-time{ display: none; }
+		}
+		&--no-start{ border-radius: 0 30px 30px 0; }
+		&--no-start &{
+			&-icon{ display: none; }
+			&-title{ display: none; }
+			&-time{ flex: 1 1 auto; }
+		}
+
+		&--current{
+			&:before{ content: "Идёт"; position: absolute; top: 50%; right: calc(100% + 10px); background: #05b1aa; color: $white; padding: 5px 15px; transform: translateY(-50%); font: 14px/20px $family; }
+			&:after{ content: ""; display: block; width: 0; height: 0; border-left: 15px #05b1aa solid; border-top: 15px transparent solid; border-bottom: 15px transparent solid; position: absolute; top: 50%; right: 100%; transform: translateY(-50%); }
+		}
+	}
+}

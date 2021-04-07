@@ -1,0 +1,26 @@
+
+.news-block{ 
+	&__title{ font: bold 24px $family; margin-bottom: 15px; 
+		a{ text-decoration: none; }
+	}
+	&__img{ margin-bottom: 30px; 
+		img{ display: block; width: 100%; }
+	}
+	&__text{ font: 18px/30px $family; }
+
+	@include media($lg){
+		&__title{ font: bold 22px $family; }
+		&__text{ font: 17px/28px $family; }
+	}
+
+	@include media($md){
+		&__title{ font: bold 20px $family; }
+		&__text{ font: 16px/26px $family; }	
+	}
+
+	@include media($xs){
+		&__title{margin-bottom: 10px; font: bold 18px $family; }
+		&__text{ font: 14px/24px $family;  }
+		&__img{ margin-bottom: 20px; } 
+	}
+}

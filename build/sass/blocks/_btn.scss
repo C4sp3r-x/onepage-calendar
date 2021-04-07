@@ -1,0 +1,40 @@
+
+.btn{ display: inline-block; border: 2px #f3f5f8 solid; background: #f3f5f8; color: $blue; font: bold 18px/20px $family; text-align: center; text-decoration: none; cursor: pointer; padding: 10px 25px; border-radius: 30px; @include time(); position: relative; z-index: 1; box-sizing: border-box;
+
+		
+	&:hover, &:focus, &.active{ outline: none; color: $white; background: $blue; }
+	
+	&--icon{ @include flex(0,center,center,nowrap); display: inline-flex; 
+		svg{ width: 20px; height: 20px; margin-right: 10px; fill: $blue; @include time(); }
+
+		&:hover, &:focus, &.active{
+			svg{ fill: $white; }
+		}
+	}
+
+	@include media($lg){ 
+	}
+
+	@include media($md){ 
+	}
+
+	@include media($xs){ 
+		
+	}
+}
+
+.is-btn-block{display: block; text-align: center; width: 100%; padding-left: 1rem; padding-right: 1rem; }
+
+.btn-day{ @include flex(center,center,center); width: 44px; height: 44px; border: 2px #eceff5 solid; border-radius: 50%; color: #90a0c4; font: bold 12px/1 $family; text-decoration: none; text-align: center; @include time();
+	span{ display: block; }
+
+	&:hover, &:active, &.is-active{ background: $blue; border-color: $blue; color: $white; }
+}
+
+.btn-icon{ @include flex(center,center,center); width: 44px; height: 44px; border: 2px #eceff5 solid; border-radius: 50%; text-decoration: none;  @include time();
+	svg{ fill: #90a0c4; width: 20px; height: 20px; display: block; @include time(); }
+
+	&:hover, &:active, &.is-active{ background: $blue; border-color: $blue; color: $white; 
+		svg{ fill: $white; }
+	}
+}

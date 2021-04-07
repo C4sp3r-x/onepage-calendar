@@ -1,0 +1,14 @@
+
+mixin mobile-menu(data)
+	if(data != undefined && data.sfx != undefined)
+		- var classes = ['mobile-block--'+data.sfx]
+
+	.mobile-block(class = classes)
+		.mobile-block__overflow
+
+		each item in data.items
+			.mobile-menu
+				.mobile-menu__item
+					a(href="#") #{item}
+
+

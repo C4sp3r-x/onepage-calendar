@@ -1,0 +1,15 @@
+
+.footer-menu{ text-align: right;  
+	&__item{ font: bold 16px/1 $family; text-transform: uppercase; margin-bottom: 15px; 
+		&:last-child{ margin-bottom: 0;  }
+		a{ text-decoration: none; }
+
+		&:hover, &.active{ 
+			a{ text-decoration: underline; }
+		}
+	}
+
+	@include media($lg){
+		&__item{ font-size: 14px; }
+	}
+}

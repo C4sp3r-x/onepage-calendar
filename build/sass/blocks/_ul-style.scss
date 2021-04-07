@@ -1,0 +1,16 @@
+
+.ul-style{ list-style: none;
+	&> li{ padding-left: 30px; position: relative; margin-bottom: 15px; text-transform: uppercase; font: bold 18px $family; 
+		&:before{ content: ""; display: block; width: 12px; height: 12px; background: #ccc; position: absolute; top: 50%; left: 0; @include translateY(-50%); @include brs(0); }
+
+		&:hover{
+			&:before{ background: $black; }
+		}
+	}
+
+	@include media($lg){
+		&> li{ font: bold 14px $family; margin-bottom: 10px; 
+			&:before{ width: 10px; height: 10px;  }
+		}
+	}
+}

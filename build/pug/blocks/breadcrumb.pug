@@ -1,0 +1,11 @@
+
+mixin breadcrumb(data)
+	if(data != undefined && data.sfx != undefined)
+		- var classes = ['breadcrumb--'+data.sfx]
+	.breadcrumb&attributes(attributes)
+		each item in data.items
+			.breadcrumb__item
+				a(href="#") #{item}
+				
+		.breadcrumb__item
+			span #{data.last}

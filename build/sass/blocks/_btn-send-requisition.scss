@@ -1,0 +1,11 @@
+
+.btn-send-requisition{  position: fixed; top: 50%; right: 29px; z-index: 500; transform: translate(50%, -50%); transform-origin: center center;
+	a{ display: block; transform: rotate(-90deg); @include background-image(linear-gradient(to right, $pink-dark, $pink-light)); border-radius: 15px 15px 0 0; color: $white; text-decoration: none; font: 24px/40px $family; padding: 10px 35px; }
+
+	@include media($lg){ right: 20px;
+		a{ font: 20px/30px $family; }
+	}
+	@include media($md){/*  top: 120px; right: 24px; transform: translate(50%, 0%); */
+		a{ font: 20px/30px $family; padding: 10px 30px; }
+	}
+}

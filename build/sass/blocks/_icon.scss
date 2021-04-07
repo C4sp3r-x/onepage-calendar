@@ -1,0 +1,19 @@
+
+.icon{ fill: initial; stroke: initial; @include time(); 
+	&.gradient{ fill: url(#soc-gradient) #447799; }
+}
+
+.icon-inline{ @include flex(0,center,center,nowrap);
+	&__icon{ margin-right: 1.5rem; @include flex-items(0 0 20px); max-width: 20px; height: 20px; }
+	//&__text{}
+	p{ margin: 0; }
+
+	&--white{ color: $white; }
+	&--white &{
+		&__icon{ color: $white; fill: $white; }
+	}
+
+	@include media($sm){
+		&__icon{ margin-right: 1rem; @include flex-items(0 0 16px); max-width: 16px; height: 16px; }
+	}
+}

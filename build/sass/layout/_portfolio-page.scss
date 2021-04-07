@@ -1,0 +1,27 @@
+
+.portfolio-page{
+	&__title{ text-align: center; margin-bottom: 40px; }
+	&__tabs{ margin-bottom: 40px; }
+	&__row{ margin-left: -10px; margin-right: -10px; margin-bottom: -20px; }
+	&__item{ margin-bottom: 20px; padding: 0 10px; 
+		&.col{ flex: 0 0 25%; max-width: 25%; }
+	}
+	&__pagination{ margin-top: 30px; text-align: center; }
+	&__wrap{ 
+		.tab-box{ display: none; 
+			&.active{ display: block; }
+		}
+	}
+
+	@include media($sm){
+		&__wrap{ max-width: 600px; margin: 0 auto; }
+		&__item{
+			&.col{ flex: 0 0 50%; max-width: 50%; }
+		}
+	}
+
+	@include media($xs){
+		&__row{ margin-left: -5px; margin-right: -5px; margin-bottom: -10px; }
+		&__item{ margin-bottom: 10px; padding: 0 5px;  }
+	}
+}

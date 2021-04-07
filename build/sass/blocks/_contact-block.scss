@@ -1,0 +1,22 @@
+
+.contact-block{ text-align: center;
+	&__icon{ height: 40px; margin-bottom: 25px; 
+		.icon{ width: 100%; height: 100%; }
+	}
+	&__title{ font: bold 24px $family; text-transform: uppercase; margin-bottom: 15px; }
+	&__text{ font-weight: 300; }
+
+	@include media($lg){
+		&__icon{ margin-bottom: 20px; }
+		&__title{ font-size: 20px; }
+	}
+
+	@include media($md){
+		&__title{ font-size: 16px; }
+	}
+
+	@include media($xs){
+		&__icon{ height: 20px; margin-bottom: 10px; }
+		&__title{ font-size: 14px; margin-bottom: 10px; }
+	}
+}

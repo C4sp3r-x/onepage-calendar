@@ -1,0 +1,22 @@
+
+mixin pagination(data)
+	.pagination
+		.pagination__prev
+			a(href="#") <<
+		.pagination__item.active
+			a(href="#") 1
+		.pagination__item
+			a(href="#") 2
+		.pagination__item
+			a(href="#") 3
+		.pagination__item
+			a(href="#") 4
+		.pagination__item.hidden-xs
+			a(href="#") 5
+		.pagination__item ...
+		.pagination__item.hidden-xs
+			a(href="#") 11
+		.pagination__item
+			a(href="#") 12
+		.pagination__next
+			a(href="#") >>

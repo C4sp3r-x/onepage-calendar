@@ -1,0 +1,65 @@
+
+.main-section{ padding: 20px 0 80px; @include flex-items(1 1 auto);
+	&__bread{ margin-bottom: 60px; }
+	&__title{ text-align: center; margin-bottom: 40px; }
+
+	&__row{ @include flex(space-between,stretch,stretch,nowrap); padding: 0 20px; max-width: 1900px; margin: 0 auto; }
+	&__col-left{ flex: 0 0 19%; max-width: 19%; padding-right: 40px; 
+		&__block{ margin-bottom: 20px; }
+	}
+	&__col-main{ flex: 1 1 auto; max-width: 62%; }
+	&__col-right{ flex: 0 0 19%; max-width: 19%; padding-left: 40px; 
+		&__block{ margin-bottom: 20px; }
+	}
+	&__categorys{ display: none; margin-bottom: 50px; }
+	&__pagination{ margin-top: 50px; text-align: center; }
+
+	&--news &{
+		&__title{ margin-bottom: 30px; }
+		&__list{ margin: 0 -30px -50px; }
+		&__item{ margin-bottom: 50px; padding: 0 30px; }
+
+	}
+
+	&--page-404{ padding: 50px 0 300px; background: url('../images/top-bg-404.jpg') 0% 100%/contain no-repeat #FEFFF1; }
+	&--page-404 &{
+		&__title{ margin-bottom: 20px; }
+		&__desc{ text-align: center; line-height: normal; }
+	}
+
+
+	@include media($lg){
+		&__bread{ margin-bottom: 50px; }
+		&__col-left{ flex: 0 0 20%; max-width: 20%; padding-right: 20px; }
+		&__col-main{ flex: 1 1 auto; max-width: 60%; }
+		&__col-right{ flex: 0 0 20%; max-width: 20%; padding-left: 20px; }
+
+		&--news &{
+			&__list{ margin: 0 -15px -40px; }
+			&__item{ margin-bottom: 40px; padding: 0 15px; }
+
+		}
+	}
+
+	@include media($md){
+		&__bread{ margin-bottom: 40px; }
+		&__row{ @include flex(space-between,stretch,stretch,wrap); }
+		&__col-left{ display: none; }
+		&__col-main{ flex: 1 1 100%; max-width: 100%; }
+		&__col-right{ flex: 1 1 100%; max-width: 100%; padding: 0; @include flex(center,stretch,stretch); margin-top: 70px;
+			.module-block{ max-width: 330px; margin: 0 10px 20px; }
+		}
+		&__categorys{ 
+    		display: flex;
+		}
+	}
+
+	@include media($sm){
+		&--page-404{ padding: 50px 0 250px; background: url('../images/top-bg-404.jpg') -120px 100%/contain no-repeat #FEFFF1; }
+	}
+	@include media($xs){
+		&__bread{ margin-bottom: 30px; }
+
+		&--page-404{     padding: 50px 0 200px; background: url(../images/top-bg-404.jpg) -200px 100%/auto 80% no-repeat #FEFFF4; }
+	}
+}

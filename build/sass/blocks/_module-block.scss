@@ -1,0 +1,24 @@
+
+.module-block{ background: #fbf2e6; border: 1px #f1e4d4 solid; border-radius: 10px; padding: 20px 15px;
+	&__title{ margin-bottom: 10px; font: bold 18px $family; }
+
+	&--tags &{
+		&__list{ @include flex(); margin: 0 0 -10px -10px; }	
+		&__item{ margin: 0 0 10px 10px; 
+			a{ display: block; padding: 4px 5px; background: #f2e4d1; font: bold 16px/20px $family; text-decoration: none; }
+		}
+	}
+
+	&--widget{ padding: 0; overflow: hidden; background: $white; 
+		img{ width: 100%; display: block; }
+	}
+
+	@include media($lg){
+		&__title{ font: bold 16px $family; }
+
+		&--tags &{
+			&__item a{ font: bold 15px/18px $family; }
+		}
+	}
+	
+}

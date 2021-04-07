@@ -1,0 +1,98 @@
+include ../blocks/logo
+include ../blocks/burger
+include ../blocks/main-menu
+include ../blocks/container
+
+mixin header(data)
+	if(data != undefined && data.sfx != undefined)
+		- var attributes = {class: ['header--'+data.sfx]}
+
+	header.header.page__left&attributes(attributes)
+		.page__menu
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#menu")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#newspaper")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#list")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#ticher")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#winner")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#folders")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#online-learning")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#user")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#settings")
+			.page__menu-item.is-active
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#calendar")
+			.page__menu-item
+				a(href="#")
+					svg
+						use(xlink:href="images/sprite.svg#operator")
+
+
+mixin header2(data)
+	if(data != undefined && data.sfx != undefined)
+		- var attributes = {class: ['header--'+data.sfx]}
+
+	header.header.page__left&attributes(attributes)
+		.page__menu
+			.page__menu-item
+				a(href="#")
+					img(src="images/menu.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/desk.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/journal.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/study.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/medal.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/folder.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/pc.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/user.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/settings.png", alt="")
+			.page__menu-item.is-active
+				a(href="#")
+					img(src="images/calendar.png", alt="")
+			.page__menu-item
+				a(href="#")
+					img(src="images/support.png", alt="")
+
+

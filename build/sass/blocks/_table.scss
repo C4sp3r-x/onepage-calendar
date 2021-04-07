@@ -1,0 +1,14 @@
+table.table-style{ border: 1px #f1e4d4 solid; width: 100%;
+	th{background: #f1e4d4; padding: 20px 25px; border-right: 1px #f1e4d4 solid;
+		&:last-child{ border: 0;}
+	}
+	td{ padding: 20px 25px; border-right: 1px #f1e4d4 solid; border-bottom: 1px #f1e4d4 solid;
+		&:last-child{ border-right: 0;}
+	}
+	
+	//tbody tr:nth-of-type(2n) td{background: $grey; border-color: #fff; }
+
+	@include media($xs){
+		th, td{ padding: 10px; line-height: normal; }
+	}
+}

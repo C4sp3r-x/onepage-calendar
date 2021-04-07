@@ -1,0 +1,12 @@
+
+.video-block{ position: relative; z-index: 1;
+	&__link{ 
+		&:after{ content: ""; display: block; width: 88px; height: 88px; border-radius: 50%; background: url('../images/video-link.png') 50% 50% no-repeat; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; pointer-events: none;  }
+	}
+
+	&--sm &{
+		&__link{
+			&:after{ width: 55px; height: 55px; }
+		}
+	}
+}

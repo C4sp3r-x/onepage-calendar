@@ -1,0 +1,12 @@
+
+include ../blocks/container
+
+mixin main-section(data)
+	if(data != undefined && data.sfx != undefined)
+		//- var attributes = {class: ['main-section--'+data.sfx]}
+
+	main.main-section&attributes(attributes)
+		+container().main-section__body
+			
+			block
+			

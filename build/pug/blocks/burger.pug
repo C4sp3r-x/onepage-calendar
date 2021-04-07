@@ -1,0 +1,12 @@
+
+
+mixin burger(data)
+	if(data != undefined && data.sfx != undefined)
+		- var classes = ['burger--'+data.sfx]
+
+	.burger.js-show-menu(class = classes)
+		a.burger__lines(href="#")
+			span.burger__top
+			span.burger__center
+			span.burger__bottom
+		span.burger__label Меню

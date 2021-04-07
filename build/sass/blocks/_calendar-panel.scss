@@ -1,0 +1,14 @@
+
+.calendar-panel{ background: $white; border-radius: 15px; padding: 25px; @include flex(space-between,center,center); 
+	&__left{ @include flex(0,center,center,nowrap); }
+	&__time{ margin-right: 20px; color: $black; font: bold 16px $family; }
+	&__day{ margin-right: 20px; }
+	&__current{ text-align: center; flex: 1 1 auto; font: bold 24px $family; color: $black; 
+		span{ color: #e5e9f1; }
+	}
+	&__buttons{ @include flex(flex-end,center,center,nowrap); 
+		&-item{ margin-left: 20px; 
+			&:first-child{ margin-left: 0; }
+		}
+	}
+}

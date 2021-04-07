@@ -1,0 +1,25 @@
+
+mixin main-menu(data)
+	if(data != undefined && data.sfx != undefined)
+		- var classes = ['mobile-block--'+data.sfx]
+
+	nav.main-menu(class = classes)
+		.main-menu__close
+			.burger.active.js-show-menu
+				a.burger__lines(href="#")
+					span.burger__top
+					span.burger__center
+					span.burger__bottom
+				span.burger__label Меню
+		each item in data.items
+			.main-menu__item(class=item.class)
+				a(href=item.link) #{item.title}
+
+			if(item.sub != undefined)
+				.main-menu__sub
+					each sub in item.sub
+						.main-menu__sub__item(class=sub.class)
+							a(href=sub.link) #{sub.title}
+
+
+

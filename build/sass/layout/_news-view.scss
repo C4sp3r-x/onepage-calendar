@@ -1,0 +1,21 @@
+
+.news-view{
+	&__title{ text-align: center; margin-bottom: 25px; }
+	&__info-bottom{ font: 18px $family;	color: #373137; border-top: 1px #e4e5cf solid; padding-top: 30px; margin-top: 60px; @include flex(space-between,center,center,nowrap); }
+	&__date{ margin-right: 50px; }
+	&__views{ flex: 1 1 auto; @include flex(0,center,center);
+		&__icon{ fill: #373137; width: 20px; height: 20px; margin-right: 10px; }
+	}
+	//&__soc{}
+
+	@include media($lg){
+		&__info-bottom{ font: 15px $family;	padding-top: 25px; margin-top: 50px; }
+	}
+	@include media($sm){
+		&__info-bottom{ font: 14px $family; }
+	}
+	@include media($xs){
+		&__info-bottom{ font: 13px $family; @include flex(center,center,center,wrap); }
+		&__soc{ flex: 1 1 100%; margin-top: 35px; }
+	}
+}

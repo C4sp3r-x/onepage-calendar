@@ -1,0 +1,7 @@
+
+.contact-info-icon{ @include flex(0,center,center,nowrap);
+	&__icon{ width: 50px; height: 50px; flex: 0 0 50px; max-width: 50px; margin-right: 15px; border-left: 2px #b93585 solid; border-right: 2px #f9635c solid; border-top: 2px #db5073 solid; border-bottom: 2px #db5073 solid; border-radius: 50%; @include flex(center,center,center);
+		svg{ width: 26px; height: 26px; display: block; }
+	}
+	//&__text{}
+}

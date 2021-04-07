@@ -1,0 +1,53 @@
+
+.footer{ background: $white; 
+	&__go-up{ position: absolute; top: -90px; right: 40px; @include flex(center,center,center); width: 52px; height: 60px;	 @include background-image(linear-gradient(to bottom right, #b5267e, #fc574d));
+		svg{ fill: $white; width: 20px; height: 32px; }
+	}
+	&__top{ padding: 30px 0; border-top: 1px #f4ead6 solid; position: relative; }
+	&__row{ @include flex(space-between); }
+	&__logo{ 
+		img{ display: block; }
+	}
+	&__soc-table{ display: none; }
+	&__bottom{ padding: 15px 0; background: #fbf2e6; border-top: 1px #f1e4d4 solid;  }
+	&__copyright{ color: #3d3a3a; font: 17px/1 $family; text-align: center; }
+	&__map-link{ text-align: center; margin-top: 20px; font: 17px $family; }
+	
+
+	@include media($lg){
+		&__go-up{ right: 20px; }
+		&__top{ padding: 20px 0; }
+	}
+
+	@include media($sm){
+
+		&__top{ padding: 20px 0 20px; }
+		&__soc{ display: none; }
+		&__soc-table{ @include flex(0,center,center,nowrap); margin-top: 20px; }
+		&__map-link{ margin: 0 0 0 40px;}
+	}
+
+	@include media($xs){
+		&__go-up{ right: 10px; top: auto; bottom: 30px;  }
+		&__top{ padding: 30px 0 30px; }
+		&__logo{ flex: 0 0 40%; max-width: 40%; margin-bottom: 35px;
+			img{ max-width: 155px; width: 100%; }
+		}
+		&__soc{ display: block; flex: 0 0 60%; max-width: 60%; margin-bottom: 35px; }
+		&__soc-table{ display: none; }
+		&__map-link{ margin: 15px 0 0;}
+		&__phones{ flex: 1 1 100%; margin-bottom: 25px; 
+			.header-contacts{ max-width: 240px; margin: 0 auto; }
+		}
+		&__contacts{ flex: 1 1 100%; 
+			.header-contacts{ max-width: 240px; margin: 0 auto; }
+		}
+		&__copyright{  font: 13px/1 $family; }
+		&__map-link{ font: 14px $family; }
+	}
+
+	@include media($xxs){
+		&__logo{ flex: 0 0 40%; max-width: 40%;	}
+		&__soc{ flex: 0 0 60%; max-width: 60%; }
+	}
+}

@@ -1,0 +1,93 @@
+include ../blocks/container
+
+mixin footer(data)
+	if(data != undefined && data.sfx != undefined)
+		- var attributes = {class: ['footer--'+data.sfx]}
+
+	footer.footer&attributes(attributes)
+		.footer__top
+			a.footer__go-up.js-scroll-to(href="#")
+				svg.icon
+					use(xlink:href="images/sprite.svg#arrow-up")
+
+			+container().footer__container
+				.footer__row
+					.footer__logo
+						+logo()
+
+					.footer__soc
+						.soc-list.soc-list--center
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-facebook")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-vk")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-youtube")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-instagram")
+						.footer__map-link
+							a(href="#") Карта сайта
+						
+					.footer__phones
+						.header-contacts.header-contacts--footer
+							.header-contacts__item
+								.header-contacts__icon
+									svg.icon
+										use(xlink:href="images/sprite.svg#icon-phone")
+								a.header-contacts__text(href="#") 8 (495) 724-63-04
+							.header-contacts__item
+								.header-contacts__icon
+									svg.icon
+										use(xlink:href="images/sprite.svg#icon-phone")
+								a.header-contacts__text(href="#") 8 (965) 379-51-13
+
+					.footer__contacts
+						.header-contacts.header-contacts--footer
+							.header-contacts__item
+								.header-contacts__icon
+									svg.icon
+										use(xlink:href="images/sprite.svg#icon-email")
+								a.header-contacts__text(href="#") zakaz@fenixevent.ru
+							.header-contacts__item
+								.header-contacts__icon
+									svg.icon
+										use(xlink:href="images/sprite.svg#icon-marker")
+								a.header-contacts__text(href="#") Москва, ул. ул. Лодочная,<br> д. 15, строение 1А
+
+					.footer__soc-table
+						.soc-list
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-facebook")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-vk")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-youtube")
+							.soc-list__item
+								a(href="#")
+									svg.icon
+										use(xlink:href="images/sprite.svg#soc-instagram")
+						.footer__map-link
+							a(href="#") Карта сайта
+
+		.footer__bottom
+			+container()
+				.footer__copyright © Все права защищены.<br class="none visible-xs"> 2012-201 ООО «Феникс эвент»
+	
+	svg(style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false")
+		linearGradient#soc-gradient(x2="1" y2="1")
+			stop( offset="0%" stop-color="#fc4e44")
+			stop( offset="100%" stop-color="#bc316f")

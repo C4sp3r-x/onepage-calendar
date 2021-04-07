@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <title>Календарь</title>
+    <meta
+      name="description"
+      content="The template for quick start of development with Gulp, Jade and Stylus"
+    />
+    <meta
+      name="keywords"
+      content="demo, gulp, bem, modules, sprites, svg, jade, stylus, boilerplate, frontend, project, template"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <link rel="stylesheet" href="css/template.css" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Все страницы" />
+    <meta
+      property="og:description"
+      content="The template for quick start of development with Gulp, Jade and Stylus"
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+  </head>
+  <body>
+    <div class="page__row">
+      <header class="header page__left header--">
+        <div class="page__menu">
+          <div class="page__menu-item">
+            <a href="#"><img src="images/menu.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/desk.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/journal.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/study.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/medal.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/folder.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/pc.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/user.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/settings.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item is-active">
+            <a href="#"><img src="images/calendar.png" alt="" /></a>
+          </div>
+          <div class="page__menu-item">
+            <a href="#"><img src="images/support.png" alt="" /></a>
+          </div>
+        </div>
+      </header>
+      <div class="page__body">
+        <div class="page__head">
+          <div class="page__title">
+            <img
+              src="images/calendar-black.svg"
+              alt=""
+              style="width: 18px; height: 18px; margin-right: 18px"
+            /><span>Календарь</span>
+          </div>
+          <div class="page__user user-info">
+            <div class="user-info__img">
+              <img src="images/avatar.png" alt="" />
+            </div>
+            <div class="user-info__wrap">
+              <div class="user-info__name">Хомячкова Вероника</div>
+              <div class="user-info__id">ID 100119870110257823</div>
+            </div>
+          </div>
+        </div>
+        <div class="page__tabs">
+          <div class="page__tabs-item is-active">
+            <a href="#tab-1">МОЁ РАСПИСАНИЕ</a>
+          </div>
+          <div class="page__tabs-item">
+            <a href="#tab-2">КАЛЕНДАРЬ МЕРОПРИЯТИЙ</a>
+          </div>
+        </div>
+        <div class="page__panel calendar-panel">
+          <div class="calendar-panel__left">
+            <div class="calendar-panel__time">8:18</div>
+            <div class="calendar-panel__day">
+              <a class="btn-day is-active" href="#"
+                ><span
+                  >Пн<br />
+                  22</span
+                ></a
+              >
+            </div>
+            <div class="calendar-panel__day">
+              <a class="btn-day" href="#"
+                ><span
+                  >Пн<br />
+                  22</span
+                ></a
+              >
+            </div>
+            <div class="calendar-panel__day">
+              <a class="btn-day" href="#"
+                ><span
+                  >Пн<br />
+                  22</span
+                ></a
+              >
+            </div>
+            <div class="calendar-panel__day">
+              <a class="btn-icon" href="#">
+                <img
+                  src="images/calendar-left.svg"
+                  alt=""
+                  style="width: 20px; height: 18px"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="calendar-panel__current">
+            Понедельник, 22 сентября, <span>2020 г</span>
+          </div>
+          <div class="calendar-panel__buttons">
+            <div class="calendar-panel__buttons-item">
+              <a class="btn btn--icon" href="#">
+                <img
+                  src="images/printer.svg"
+                  alt=""
+                  style="width: 18px; height: 19px; margin-right: 10px"
+                />
+                <span>Распечатать</span></a
+              >
+            </div>
+            <div class="calendar-panel__buttons-item">
+              <a class="btn-icon" href="#">
+                <img
+                  src="images/calendar-right.svg"
+                  alt=""
+                  style="width: 22px; height: 18px"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="js-calendar-block"></div>
+        <div class="page__calendar calendar-block">
+          <div class="calendar-block__hour">
+            <div class="calendar-block__hour-icon">
+              <svg>
+                <use xlink:href="/images/sprite.svg#clock"></use>
+              </svg>
+            </div>
+            <div class="calendar-block__hour-item"><span>5</span></div>
+            <div class="calendar-block__hour-item"><span>10</span></div>
+            <div
+              class="calendar-block__hour-item calendar-block__hour-item--point"
+            >
+              <span
+                >15<br />
+                мин</span
+              >
+            </div>
+            <div class="calendar-block__hour-item"><span>20</span></div>
+            <div class="calendar-block__hour-item"><span>25</span></div>
+            <div
+              class="calendar-block__hour-item calendar-block__hour-item--point"
+            >
+              <span
+                >30<br />
+                мин</span
+              >
+            </div>
+            <div class="calendar-block__hour-item"><span>35</span></div>
+            <div class="calendar-block__hour-item"><span>40</span></div>
+            <div
+              class="calendar-block__hour-item calendar-block__hour-item--point"
+            >
+              <span
+                >45<br />
+                мин</span
+              >
+            </div>
+            <div class="calendar-block__hour-item"><span>50</span></div>
+            <div class="calendar-block__hour-item"><span>55</span></div>
+            <div
+              class="calendar-block__hour-item calendar-block__hour-item--point calendar-block__hour-item--last"
+            >
+              <span
+                >60<br />
+                мин</span
+              >
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">8:00</div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">9:00</div>
+            <div
+              class="calendar-block__item calendar-block__item--current js-lesson-start"
+              id="lesson-1"
+            ></div>
+            <div
+              class="calendar-block__item calendar-block__item--current"
+            ></div>
+            <div
+              class="calendar-block__item calendar-block__item--current"
+            ></div>
+            <div
+              class="calendar-block__item calendar-block__item--current"
+            ></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-2"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div
+              class="calendar-block__lesson calendar-block__lesson--current js-lesson lesson-1"
+              data-id="lesson-1"
+            >
+              <div class="calendar-block__lesson-icon">
+                <img src="images/dumbell.svg" alt="" />
+              </div>
+              <div class="calendar-block__lesson-title">Зарядка</div>
+              <div class="calendar-block__lesson-time">08:00 - 08:25</div>
+            </div>
+            <div
+              class="calendar-block__lesson js-lesson lesson-2"
+              data-id="lesson-2"
+              style="background: #ddffd5"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #22ce8b"
+              >
+                <img src="images/breakfast.svg" alt="" />
+              </div>
+              <div class="calendar-block__lesson-title">Завтрак</div>
+              <div class="calendar-block__lesson-time">08:30 - 09:00</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">10:00</div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-3"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-4"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__lesson js-lesson lesson-3"
+              data-id="lesson-3"
+              style="background: #ffdfdf"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #f46363"
+              >
+                ОС
+              </div>
+              <div class="calendar-block__lesson-title">Общий сбор</div>
+              <div class="calendar-block__lesson-time">09:15 - 09:40</div>
+            </div>
+            <div
+              class="calendar-block__lesson calendar-block__lesson--no-end js-lesson lesson-4"
+              data-id="lesson-4"
+              style="background: #ddffd5"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #22ce8b"
+              >
+                <img src="images/breakfast.svg" />
+              </div>
+              <div class="calendar-block__lesson-title">Второй завтрак</div>
+              <div class="calendar-block__lesson-time">09:45 - 10:15</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">11:00</div>
+            <div class="calendar-block__item js-lesson-start"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">12:00</div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-5"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div
+              class="calendar-block__lesson js-lesson lesson-5"
+              data-id="lesson-5"
+              style="background: #fef0cd"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #ffcd54"
+              >
+                ЭК
+              </div>
+              <div class="calendar-block__lesson-title">Экскурсия</div>
+              <div class="calendar-block__lesson-time">11:00 - 12:00</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">13:00</div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-6"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__lesson js-lesson lesson-6"
+              data-id="lesson-6"
+              style="background: #ddffd5"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #22ce8b"
+              >
+                <img src="images/breakfast.svg" />
+              </div>
+              <div class="calendar-block__lesson-title">Обед</div>
+              <div class="calendar-block__lesson-time">12:20 - 12:45</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">14:00</div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-7"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__lesson js-lesson lesson-7"
+              data-id="lesson-7"
+              style="background: #ede4ff"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #9363f4"
+              >
+                ИН
+              </div>
+              <div class="calendar-block__lesson-title">Инструктаж</div>
+              <div class="calendar-block__lesson-time">13:05 - 13:45</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">15:00</div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__item js-lesson-start"
+              id="lesson-8"
+            ></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div
+              class="calendar-block__lesson calendar-block__lesson--no-end js-lesson lesson-8"
+              data-id="lesson-8"
+              style="background: #fedbfe"
+            >
+              <div
+                class="calendar-block__lesson-icon"
+                style="background: #f140f3"
+              >
+                ЛЕ
+              </div>
+              <div class="calendar-block__lesson-title">Лекция</div>
+              <div class="calendar-block__lesson-time">14:30 - 15:30</div>
+            </div>
+          </div>
+          <div class="calendar-block__row">
+            <div class="calendar-block__time">16:00</div>
+            <div class="calendar-block__item js-lesson-start"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item js-lesson-end"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+            <div class="calendar-block__item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

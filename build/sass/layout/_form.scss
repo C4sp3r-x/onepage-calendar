@@ -1,0 +1,32 @@
+
+.help-block{font: 14px $family; margin-top: 5px;}
+.error-block{ font: 14px/0.71 $family; color: $red; display: none; padding-left: 1.5rem; margin-top: 1rem;}
+
+.input-row{margin-bottom: 20px;
+	&.last{ margin-bottom: 0; }
+
+	&__error{ color: $red; margin-top: 15px; display: none; }
+
+	&.error{
+		.inputbox, textarea{ border-color: $red; }
+	}
+	&.error &{
+		&__error{ display: block; }
+	}
+
+	@include media($lg){ 
+		&__error{ margin-top: 10px; }
+	}
+
+	@include media($xs){  
+		&__error{ margin-top: 10px; }
+	}
+}
+
+.input-label{ margin: 0 0 25px; 
+	&.disabled{color: #999;}
+
+	@include media($lg){ margin-bottom: 20px; }
+	@include media($xs){ margin-bottom: 15px; } 
+}
+

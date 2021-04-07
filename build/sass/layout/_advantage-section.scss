@@ -1,0 +1,17 @@
+
+.advantage-section{ background: url('../images/advantage-section-bg.jpg') 50% 50%/cover no-repeat #5a4243; background-attachment: fixed; padding: 80px 0; color: $white;
+	&__title{ text-align: center; margin-bottom: 50px; color: $white;/*  font: bold 46px $family; */ }
+	&__row{ margin-bottom: -40px; }
+	&__item{ margin-bottom: 40px; }
+
+	@include media($lg){
+		//&__title{ font-size: 38px; }
+	}
+	@include media($md){ padding: 60px 0;
+		//&__title{ font-size: 38px; }
+	}
+
+	@include media($xs){ 
+		//&__title{ font-size: 34px; }
+	}
+}

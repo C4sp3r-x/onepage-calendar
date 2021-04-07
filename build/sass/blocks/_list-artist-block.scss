@@ -1,0 +1,113 @@
+
+.list-artist-block{ position: relative; z-index: 1; background: $white;  box-shadow: 0px 0px 7px 2px rgba(#7b4701, 0.16); padding: 25px 30px;
+	&__subtitle{ font: bold 20px $family; margin-bottom: 15px; }
+	&__head{ @include flex(space-between, center,center,nowrap); margin-bottom: 20px;
+		//&__right{ }
+	}
+	&__info{ @include flex(0,center,center,nowrap);
+		&__avatar{ margin-right: 20px; max-width: 80px; flex: 0 0 auto;
+			img{ width: 80px; height: 80px; display: block; border-radius: 50%; }
+		}
+		//&__wrap{}
+		&__name{ font: bold 20px $family; margin-bottom: 15px; 
+			a{text-decoration: none; }
+		}
+		&__date{ font: 18px $family; }
+		&__tags{ margin: 0 0 -10px -10px;
+			a{ display: inline-block; padding: 5px 10px; background: #fbf2e6; font: bold 18px/1 $family; text-decoration: none; margin: 0 0 10px 10px; }
+		}
+	}
+	&__rait{ margin-bottom: 15px; }
+	&__price{ white-space: nowrap; text-align: right; }
+	&__text{ margin-bottom: 30px; }
+	&__tabs{ position: relative;}
+	&__tab-nav{ }
+	&__tab{ padding: 25px 0 0; }
+	&__gallery{
+		&__item{ padding: 0 7px;
+			img{ display: block; }
+		}
+	}
+	&__slick-nav{ @include flex(0,center,center,nowrap); position: absolute; top: -40px; right: 0;
+		&__prev{ height: 25px;
+			&.slick-arrow{ height: 25px; position: static; margin: 0 25px 0 0; line-height: normal; }
+			svg{ width: 30px; height: 25px; }
+		}
+		&__count{
+			//strong{ }
+			span{ display: inline; }
+		}
+		&__next{ height: 25px; 
+			&.slick-arrow{ height: 25px; position: static; margin: 0 0 0 25px; line-height: normal; }
+			svg{ width: 30px; height: 25px; }
+		}
+	}
+	&__buttons{ @include flex(space-between, center,center); }
+	&__comments{
+		&__item{ margin-bottom: 50px; 
+			//&:last-child{ margin-bottom: 0; }
+		}
+	}
+
+	&--comment{ padding: 0; box-shadow: 0 0 0 transparent; }
+	&--comment-view{ padding: 0; box-shadow: 0 0 0 transparent; }
+	&--comment-view &{
+		&__text{ margin-bottom: 0; }
+	}
+
+	&--view &{ 
+		&__tab{ padding: 0; margin-bottom: 70px; 
+			&:last-child{ margin-bottom: 0; }
+		}
+		&__slick-nav{ top: -5px; }
+	}
+
+	@include media($sm){
+		&__subtitle{ font: bold 18px $family; }
+		&__info{ 
+			&__name{ font: bold 18px $family; }
+			&__date{ font: 16px $family; }
+			&__tags{
+				a{ font: bold 16px/1 $family; }
+			}
+		}
+	}
+
+	@include media($xs){  padding: 20px 15px;
+		&__head{ display: block; margin-bottom: 15px; }
+		&__subtitle{ font: bold 16px $family; }
+
+		&__info{ @include flex(0,flex-start,flex-start,nowrap); margin-bottom: 30px;
+			&__avatar{ margin-right: 15px; max-width: 60px; 
+				img{ width: 60px; height: 60px; }
+			}
+			&__name{ font: bold 16px $family; }
+			&__date{ font: 14px $family; }
+			&__tags{
+				a{ font: bold 14px/1 $family; }
+			}
+		}
+		&__price{ text-align: left; }
+
+		&__slick-nav{ @include flex(center,center,center,nowrap); position: static; margin-top: 20px; }
+
+		&__buttons{ display: block; 
+			.btn{ width: 100%; margin-bottom: 20px;
+				&:last-child{ margin-bottom: 0; }
+			}
+		}
+		&__comments{
+			&__item{ margin-bottom: 40px; 
+				//&:last-child{ margin-bottom: 0; }
+			}
+		}
+
+		&--comment{ padding: 0; box-shadow: 0 0 0 transparent; }
+		&--comment-view{ padding: 0; box-shadow: 0 0 0 transparent; }
+		&--view &{ 
+			&__tab{ margin-bottom: 40px; 
+				&:last-child{ margin-bottom: 0; }
+			}
+		}
+	}
+}

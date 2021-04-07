@@ -1,0 +1,275 @@
+extends layouts/default
+
+include layouts/footer
+include layouts/header
+include layouts/main-section
+//- include ../blocks/mobile-menu
+include blocks/container
+
+block head
+	- page.title = "Все страницы"
+	- page.class = ['']
+
+//- block mobile-menu
+//-	+mobile-menu(mainMenu.default)
+	
+block header
+	+header2({sfx: page.class}) 
+
+block main
+	.page__body
+		.page__head
+			.page__title
+				svg
+					use(xlink:href="images/sprite.svg#calendar")
+				span Календарь
+			.page__user.user-info
+				.user-info__img
+					img(src="/images/avatar.png", alt="")
+				.user-info__wrap
+					.user-info__name Хомячкова Вероника
+					.user-info__id ID 100119870110257823
+
+		.page__tabs
+				.page__tabs-item.is-active
+					a(href="#tab-1") МОЁ РАСПИСАНИЕ
+				.page__tabs-item
+					a(href="#tab-2") КАЛЕНДАРЬ МЕРОПРИЯТИЙ
+
+		.page__panel.calendar-panel
+				.calendar-panel__left
+					.calendar-panel__time 8:18
+					.calendar-panel__day
+						a.btn-day.is-active(href="#") <span>Пн<br> 22</span>
+					.calendar-panel__day
+						a.btn-day(href="#") <span>Пн<br> 22</span>
+					.calendar-panel__day
+						a.btn-day(href="#") <span>Пн<br> 22</span>
+					.calendar-panel__day
+						a.btn-icon(href="#")
+							svg
+								use(xlink:href="images/sprite.svg#calendar")
+				.calendar-panel__current Понедельник, 22 сентября, <span>2020 г</span>
+				.calendar-panel__buttons
+					.calendar-panel__buttons-item
+						a.btn.btn--icon(href="#") 
+							svg
+								use(xlink:href="images/sprite.svg#printer")
+							span Распечатать
+					.calendar-panel__buttons-item
+						a.btn-icon(href="#")
+							svg
+								use(xlink:href="images/sprite.svg#calendar-export")
+		.js-calendar-block
+		.page__calendar.calendar-block
+			.calendar-block__hour
+				.calendar-block__hour-icon
+					svg
+						use(xlink:href="/images/sprite.svg#clock")
+				.calendar-block__hour-item
+					span 5
+				.calendar-block__hour-item
+					span 10
+				.calendar-block__hour-item.calendar-block__hour-item--point
+					span 15<br> мин
+				.calendar-block__hour-item
+					span 20
+				.calendar-block__hour-item
+					span 25
+				.calendar-block__hour-item.calendar-block__hour-item--point
+					span 30<br> мин
+				.calendar-block__hour-item
+					span 35
+				.calendar-block__hour-item
+					span 40
+				.calendar-block__hour-item.calendar-block__hour-item--point
+					span 45<br> мин
+				.calendar-block__hour-item
+					span 50
+				.calendar-block__hour-item
+					span 55
+				.calendar-block__hour-item.calendar-block__hour-item--point.calendar-block__hour-item--last
+					span 60<br> мин
+
+			.calendar-block__row
+				.calendar-block__time 8:00
+				.calendar-block__item 
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+			.calendar-block__row
+				.calendar-block__time 9:00
+				.calendar-block__item.calendar-block__item--current.js-lesson-start#lesson-1
+				.calendar-block__item.calendar-block__item--current
+				.calendar-block__item.calendar-block__item--current
+				.calendar-block__item.calendar-block__item--current
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-2
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+
+				.calendar-block__lesson.calendar-block__lesson--current.js-lesson.lesson-1(data-id="lesson-1")
+					.calendar-block__lesson-icon
+						img(src="images/dumbell.svg", alt="")
+					.calendar-block__lesson-title Зарядка
+					.calendar-block__lesson-time 08:00 - 08:25
+
+				.calendar-block__lesson.js-lesson.lesson-2(data-id="lesson-2" style="background: #ddffd5")
+					.calendar-block__lesson-icon( style="background: #22ce8b")
+						img(src="/images/cutlery.svg", alt="")
+					.calendar-block__lesson-title Завтрак
+					.calendar-block__lesson-time 08:30 - 09:00
+
+			.calendar-block__row
+				.calendar-block__time 10:00
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-3
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-4
+				.calendar-block__item
+				.calendar-block__item
+
+				.calendar-block__lesson.js-lesson.lesson-3(data-id="lesson-3" style="background: #ffdfdf")
+					.calendar-block__lesson-icon( style="background: #f46363") ОС
+					.calendar-block__lesson-title Общий сбор
+					.calendar-block__lesson-time 09:15 - 09:40
+				.calendar-block__lesson.calendar-block__lesson--no-end.js-lesson.lesson-4(data-id="lesson-4" style="background: #ddffd5")
+					.calendar-block__lesson-icon( style="background: #22ce8b")
+						img(src="/images/cutlery.svg", alt="")
+					.calendar-block__lesson-title Второй завтрак
+					.calendar-block__lesson-time 09:45 - 10:15
+
+			.calendar-block__row
+				.calendar-block__time 11:00
+				.calendar-block__item.js-lesson-start
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+
+			.calendar-block__row
+				.calendar-block__time 12:00
+				.calendar-block__item.js-lesson-start#lesson-5
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+
+				.calendar-block__lesson.js-lesson.lesson-5(data-id="lesson-5" style="background: #fef0cd")
+					.calendar-block__lesson-icon(style="background: #ffcd54") ЭК
+					.calendar-block__lesson-title Экскурсия
+					.calendar-block__lesson-time 11:00 - 12:00
+
+			.calendar-block__row
+				.calendar-block__time 13:00
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-6
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+
+				.calendar-block__lesson.js-lesson.lesson-6(data-id="lesson-6" style="background: #ddffd5")
+					.calendar-block__lesson-icon(style="background: #22ce8b")
+						img(src="/images/cutlery.svg", alt="")
+					.calendar-block__lesson-title Обед
+					.calendar-block__lesson-time 12:20 - 12:45
+
+			.calendar-block__row
+				.calendar-block__time 14:00
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-7
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+
+				.calendar-block__lesson.js-lesson.lesson-7(data-id="lesson-7" style="background: #ede4ff")
+					.calendar-block__lesson-icon(style="background: #9363f4") ИН
+					.calendar-block__lesson-title Инструктаж
+					.calendar-block__lesson-time 13:05 - 13:45
+
+			.calendar-block__row
+				.calendar-block__time 15:00
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-start#lesson-8
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+
+				.calendar-block__lesson.calendar-block__lesson--no-end.js-lesson.lesson-8(data-id="lesson-8" style="background: #fedbfe")
+					.calendar-block__lesson-icon(style="background: #f140f3") ЛЕ
+					.calendar-block__lesson-title Лекция
+					.calendar-block__lesson-time 14:30 - 15:30
+
+			.calendar-block__row
+				.calendar-block__time 16:00
+				.calendar-block__item.js-lesson-start
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item.js-lesson-end
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				.calendar-block__item
+				
+
+
+			
+block footer
+	//- +footer({sfx: page.class})

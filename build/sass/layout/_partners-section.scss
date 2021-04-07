@@ -1,0 +1,29 @@
+
+.partners-section{ padding: 80px 0 90px;
+	&__title{ /* font: bold 46px $family; */ margin-bottom: 20px; text-align: center; }
+	&__text{ font: 300 25px $family; margin-bottom: 40px; text-align: center; }
+	&__slider{ padding: 0 70px; position: relative; 
+		.slick-slide{ padding: 0 10px; }
+	}
+	&__item{ margin-bottom: 25px; height: 180px; @include flex(center,center,center); padding: 20px; border: 1px #eeece7 solid;
+		&:last-child{ margin-bottom: 0; }
+		img{ display: block; }
+	}
+
+	@include media($lg){
+		&__text{ font: 300 22px $family; }
+	}
+	@include media($md){
+		&__slider{ padding: 0 50px; }
+		&__text{ font: 300 20px $family; margin-bottom: 30px; }
+		//&__title{ font: bold 38px $family; }
+	}
+
+	@include media($xs){ padding: 60px 0 70px;
+		&__slider{ padding: 0; }
+		//&__title{ font: bold 34px/1.2 $family; }
+		&__text{ font: 300 18px $family; margin-bottom: 30px; }
+		&__item{ margin-bottom: 20px; height: 150px; padding: 15px; }
+		&__navigation{ margin-top: 30px; }
+	}
+}

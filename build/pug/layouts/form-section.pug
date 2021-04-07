@@ -1,0 +1,14 @@
+
+mixin form-section()
+	section.form-section
+		+container()
+			.form-section__title.title-h1 Оставьте заявку
+			.form-section__text Закажите любую из наших услуг<br> и наслаждайтесь своим торжеством!
+			form.form-section__form
+				.input-row
+					textarea.inputbox--white(placeholder="Ваше сообщение")
+				.input-row
+					input.inputbox.inputbox--white(type="text" placeholder="Телефон")
+				.form-section__buttons
+					button.btn.btn--lg(type="submit") Отправить
+				.form-section__polic Нажимая на конопку Вы соглашаетесь<br> <a href="#">на обработку персональных данных.</a>

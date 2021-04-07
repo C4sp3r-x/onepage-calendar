@@ -1,0 +1,8 @@
+
+.map-section{ height: 580px;
+	&__map{ width: 100%; height: 100%; }  
+
+	@include media($xs){
+		height: 80vh;
+	}
+}

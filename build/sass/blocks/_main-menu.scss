@@ -1,0 +1,121 @@
+.main-menu{ @include flex(0,center,center,nowrap);
+	&__close{ flex: 1 1 100%; border-bottom: 1px #f3f0e9 solid; padding: 20px 15px; display: none;  }
+
+	&__arrow{ width: 30px; height: 30px; position: absolute; top: -6px; right: 0; background: url('../images/arrow-drop.svg') 50% 50%/12px auto no-repeat; @include time(); /* transform: translateY(-50%); */ }
+
+	&__item{ font: 20px/1 $family; color: #3a353a; margin: 0 0 0 5rem; position: relative; 
+		&> a{ text-decoration: none; white-space: nowrap; display: block; @include time(); padding-bottom: 24px; margin-bottom: -24px;  position: relative;
+			&:after{ content: ""; display: block; width: 0; height: 6px; @include background-image(linear-gradient(to right, $pink-dark, $pink-light)); @include time(); position: absolute; bottom: 0; left: 0; }
+		}
+
+		&.parent{
+			&> a{ padding-right: 30px;
+				//&:before{content: ""; width: 12px; height: 12px; position: absolute; top: 5px; right: 0; background: url('../images/arrow-drop.svg') 100% 50%/12px auto no-repeat; @include time(); }
+			}
+
+			&.parent--full{ position: static; }
+		}
+
+		&:hover, 
+		&.active, &.hover{ 
+			
+			&> a{ text-decoration: none; 
+				&:after{ width: 100%; }
+			}
+
+			&.parent{
+				&> a{ 
+					.main-menu__arrow{ transform: rotate(-180deg); } 
+				}
+			}
+		}
+
+		&:hover, 
+		&.hover{
+			.main-menu__sub{ top: calc(100% + 23px); opacity: 1; pointer-events: auto; }
+
+			&.parent--full{
+				.main-menu__sub{ top: 100%; }
+			}
+		}
+	}
+
+	&__sub{ border-top: 1px #f2f0f0 solid; position: absolute; top: -100%; left: 50%; z-index: 500; min-width: 200px; transform: translateX(-50%); background: $white; opacity: 0; pointer-events: none; @include time(); padding: 20px 40px;
+		&__item{ font: 17px/1 $family; color: #3a353a; margin-bottom: 10px;
+			&:last-child{ margin: 0; }
+			& + .main-menu__sub__title{ margin-top: 20px; }
+
+			&> a{ display: block; @include time(); text-decoration: none; }
+
+			&:hover, &.active{
+				&> a{ text-decoration: underline; }
+			}
+		}
+		&__title{ border: 1px #f1e4d4 solid; background: #fbf2e6; min-height: 60px; @include flex(center,center,center); box-shadow: -6px 6px 9px rgba(#693d01,0.11); color: #3a353a; font: bold 18px/20px $family; margin-bottom: 20px; text-align: center;
+			&> a{ display: block; @include time(); text-decoration: none; }
+		}
+
+		&--full{ left: 0; width: 100%; transform: translateX(0); padding: 20px 15px; }
+	}
+
+	&__row{ margin-bottom: -20px; }
+	&__col{ margin-bottom: 20px; }
+
+	@include media($lg){
+		&__item{ margin-left: 25px; font-size: 18px; }
+		&__sub{ 
+			&__item{ font-size: 16px; }
+		}
+	}
+
+	@include media(1200px){  
+		@include flex(space-between,flex-end,flex-end,wrap); background: $white; position: relative;
+		
+		&__close{ display: block; }
+
+		&__arrow{ top: 50%; transform: translateY(-50%); }
+
+		&__sub{ display: none; }
+
+		&__item{ border-bottom: 1px #f3f0e9 solid; margin: 0; flex: 1 1 auto; font: 16px/1 $family;
+			&> a{ padding: 20px 5px; margin: 0; text-align: center; }
+	 
+			&.parent{ 
+				&> a{ padding-right: 30px;
+					&:before{ top: 50%; transform: translateY(-50%); right: 10px; }
+				}
+
+				&.parent--full{ position: static; }
+			}
+
+			&.hover{
+				.main-menu__sub{ top: 100%; display: block; }
+				.main-menu__arrow{ transform: rotate(-180deg) translateY(50%)!important; }
+
+				&.parent--full{
+					.main-menu__sub{ top: 100%; }
+				}
+			}
+		}
+	}
+
+	@include media($sm){ 
+		&__sub{ padding: 20px 15px;
+			&__item{ font: 14px/1 $family; }
+			&__title{ min-height: 50px; font: bold 16px/18px $family; margin-bottom: 15px;
+				&> a{ display: block; @include time(); text-decoration: none; }
+			}
+
+			&--full{ left: 0; width: 100%; transform: translateX(0); padding: 20px 15px; }
+		}
+
+	}
+
+	@include media($xs){ display: block;
+		&__item{
+			&.parent{ position: static; }
+		}
+		&__sub{ position: static; transform: none; }
+	} 
+	
+}

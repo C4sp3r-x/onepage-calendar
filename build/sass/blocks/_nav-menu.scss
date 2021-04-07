@@ -1,0 +1,28 @@
+
+.nav-menu{ @include flex(space-between,stretch,stretch);
+	&__item{ @include flex-items(1 1 auto);
+		a{ display: block; padding: 15px 7rem; font: 500 16px/18px $family; color: rgba($black,0.5); text-transform: uppercase; border: 1px transparent solid; @include time(); background: #f5f5f5; text-decoration: none; text-align: center; }
+
+		&:hover, &.active{
+			a{ color: $black; background: $white; border-color: $grey; }
+		}
+	}
+	&__select{ display: none; }
+
+	@include media($lg){
+		&__item{ 
+			a{ font: 500 14px/1 $family; padding: 15px 5rem; }
+		}
+	}
+
+	@include media($md){
+		&__item{ 
+			a{ font: 500 12px/1 $family; padding: 10px 3rem; }
+		}
+	}
+
+	@include media($xs){ display: block; 
+		&__item{ display: none; }
+		&__select{ display: block; }
+	}
+}

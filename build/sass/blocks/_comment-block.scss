@@ -1,0 +1,67 @@
+
+.comment-block{ text-align: center;
+	&__date{ color: #aaa9a9; font: 20px $family; margin-bottom: 20px; }
+	&__title{ font: bold 21px $family; margin-bottom: 15px; }
+	&__text{ font: 20px/35px $family; }
+
+	&--view{ text-align: left; @include flex(0,0,0,nowrap); }
+	&--view &{
+		&__img{ margin-right: 50px; flex: 0 0 290px; max-width: 290px;
+			img{ display: block; border: 1px #e8e8e8 solid; }
+		}
+		&__head{ @include flex(space-between,0,0,nowrap); margin-bottom: 20px; }
+		&__date{ font: 18px/34px $family; margin: 0; white-space: nowrap; color: $text-color; }
+		&__title{ font: bold 24px/34px $family; margin: 0;  }
+		&__text{ padding: 0 110px 0 0; position: relative; 
+			&__bg{ width: 50px; height: 50px; position: absolute; top: 0; right: 0; pointer-events: none; }
+		}
+	}
+
+	@include media($lg){
+		&__date{ font: 18px $family; }
+		&__title{ font: bold 19px $family; }
+		&__text{ font: 18px/30px $family; }
+
+		&--view &{
+			&__img{ margin-right: 30px; flex: 0 0 250px; max-width: 250px; }
+			&__date{ font: 16px/30px $family; }
+			&__title{ font: bold 20px/30px $family; }
+			&__text{ padding: 0 80px 0 0; font: 16px/26px $family; }
+		}
+	}
+	@include media($md){
+		&__date{ font: 16px $family; }
+		&__title{ font: bold 18px $family; }
+		&__text{ font: 16px/24px $family; }
+	}
+
+	@include media($sm){
+		&--view &{
+			&__img{ margin-right: 20px; flex: 0 0 230px; max-width: 230px; 
+				.comment-block__date{ margin-top: 20px; }
+			}
+			&__date{ font: bold 16px $family; }
+			&__title{ font: bold 18px/26px $family; }
+			&__text{ padding: 0 60px 0 0; font: 16px/24px $family; }
+		}
+	}
+	@include media($xs){
+		&__date{ font: 14px $family; }
+		&__title{ font: bold 17px $family; }
+		&__text{ font: 14px/20px $family; }
+
+		&--view{ display: block; text-align: center; }
+		&--view &{
+			&__img{ margin: 0 0 25px; max-width: 100%; 	
+				img{ max-width: 230px; margin: 0 auto; }
+			}
+			&__date{ font: bold 14px $family; }
+			&__head{ margin-bottom: 15px; }
+			&__title{ font: bold 16px/24px $family; }
+			&__wrap{ position: relative;}
+			&__text{ padding: 0; position: static;
+				&__bg{ top: -50px; }
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+
+.catalog-artists{
+	&__title{ text-align: center; margin-bottom: 25px; }
+	&__row{ margin-bottom: -40px; }
+	&__item{ margin-bottom: 40px; }
+	&__buttons{ text-align: center; margin-top: 20px; }
+	&__group{ margin-bottom: 70px; }
+
+	@include media($lg){
+		&__row{ margin: 0 -10px -40px; }
+		&__item{ padding: 0 10px; }
+		&__group{ margin-bottom: 50px; }
+	}
+
+	@include media($xs){
+		&__row{ margin: 0 -5px -40px; }
+		&__item{ padding: 0 5px; }
+		&__group{ margin-bottom: 40px; }
+	}
+}

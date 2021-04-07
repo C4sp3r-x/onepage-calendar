@@ -1,0 +1,21 @@
+include ../blocks/javascripts
+include head
+
+doctype html
+html(lang="ru")
+	head
+		-
+			let page = {
+				title: "",
+				class: []
+			};
+
+		block head
+
+		+head({ title: page.title })
+
+	body(class=page.class)
+		.page__row
+			block page
+
+		+javascripts()

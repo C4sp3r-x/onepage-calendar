@@ -1,0 +1,38 @@
+.pagination{ @include flex(center,center,center);
+	&__prev{ margin-right: 20px; height: 25px;
+		img{ display: block; }
+		svg{ width: 30px; height: 25px; }
+	}
+	&__next{ margin-left: 20px; height: 25px;
+		img{ display: block; }
+		svg{ width: 30px; height: 25px; }
+	}
+	&__item{ font-weight: bold; line-height: 42px; margin: 0 7px; 
+		a{ display: block; width: 46px; height: 46px; text-align: center; text-decoration: none; color: $text-color; border: 2px transparent solid; position: relative; @include time();
+
+			&:after{ content: ""; display: block; width: 100%; height: 100%; @include background-image(linear-gradient(to right, $pink-dark, $pink-light), linear-gradient(to right, $pink-dark, $pink-light)); position: absolute; top: 0; left: 0; z-index: -1; background-size: 100% 2px; background-position: 0 0, 0 100%; background-repeat: no-repeat; border-left: 2px $pink-dark solid; border-right: 2px $pink-light solid; }
+			&:before{ content: ""; display: block; width: 0%; height: 100%; @include background-image(linear-gradient(to right, $pink-dark, $pink-light)); position: absolute; top: 0; left: 0; z-index: -1; @include time(); }
+		}
+		
+		&:hover, &.active{
+			a{ color: $white; 
+				&:before{ width: 100%; }
+			}
+		}
+	}
+
+	@include media($sm){
+		/* &__item{ font: 500 12px/33px $family; 
+			a{ width: 35px; height: 35px; }
+		} */
+	}
+
+	@include media($xs){
+		&__next{  margin-left: 5px; }
+		&__prev{ margin-right: 5px; }
+		&__item{ margin: 0 3px;	font: 500 14px/31px $family; 
+			&:nth-of-type(5), &:nth-of-type(6){ display: none; } 
+			a{ width: 35px; height: 35px; }
+		}
+	}
+}

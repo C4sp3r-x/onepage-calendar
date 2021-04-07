@@ -1,0 +1,21 @@
+
+.other-case-section{ background: #fbf2e6; border-top: 1px #f1e4d4 solid; padding: 60px 0 70px; 
+	&__title{ margin-bottom: 35px; text-align: center; }
+	&__buttons{ text-align: center; margin-top: 40px; }
+	&__row{ margin: 0 -10px -20px; }
+	&__item{ margin-bottom: 20px; padding: 0 10px;
+		&.col{ flex: 0 0 25%; max-width: 25%; }
+	}
+
+	@include media($sm){
+		&__wrap{ max-width: 600px; margin: 0 auto; }
+		&__item{
+			&.col{ flex: 0 0 50%; max-width: 50%; }
+		}
+	}
+
+	@include media($xs){
+		&__row{ margin-left: -5px; margin-right: -5px; margin-bottom: -10px; }
+		&__item{ margin-bottom: 10px; padding: 0 5px;  }
+	}
+}

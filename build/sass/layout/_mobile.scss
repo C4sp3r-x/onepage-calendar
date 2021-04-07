@@ -1,0 +1,32 @@
+
+@media (max-width: $lg) {
+	.hidden-lg{display: none!important;}
+	.visible-lg{display: block;} 
+	.visible-lg-inline{display: inline-block;}
+}
+	
+@media (max-width: $md) { //NOTE
+	.hidden-md, .hidden-1024{display: none!important;}
+	.visible-md, .visible-1024{display: block;}
+	.visible-md-inline, .visible-1024-inline{display: inline-block;}
+	
+}	
+
+@media (max-width: $sm) { 
+	
+	.hidden-sm{display: none!important;}
+	.visible-sm{display: block;}
+	.visible-sm-inline{display: inline-block;}
+	
+}
+
+@media (max-width: $xs) and (orientation: landscape) { // mobile горизонт
+	
+}
+@media (max-width: $xs) { // mobile
+	.hidden-xs, .hidden-750{display: none!important;}
+	.visible-xs, .visible-750{display: block;}
+	.visible-xs-inline, .visible-750-inline{display: inline-block;}
+	
+}
+

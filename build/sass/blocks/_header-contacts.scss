@@ -1,0 +1,73 @@
+
+.header-contacts{ @include flex();
+	a{ text-decoration: none; @include time();
+		&:hover{ color: $pink-light; }
+	}
+	
+	&__item{ @include flex(0,center,center,nowrap); margin-right: 60px;  font: 19px $family;
+		&:last-child{ margin-right: 0; }
+	}
+	&__icon{ margin-right: 7px; height: 16px;
+		.icon{ width: 16px; height: 16px; fill: #666464; }
+	}
+	&__text{ color: #666464; text-decoration: none; }
+	&__call{ font: bold 19px $family; 
+		a{ text-decoration: none; @include time();
+			&:hover{ color: $pink-light; }
+		}
+	}
+
+	&--fixed{ @include flex(0,center,center); }
+	&--fixed &{
+		&__item{ margin-bottom: 10px;
+			&:last-child{ margin-bottom: 0; }
+		}
+	}
+
+	&--footer{ display: block; }
+	&--footer &{
+		&__item{ margin: 0 0 30px; 
+			&:last-child{ margin: 0; }
+		}
+		&__text{ color: #2d2d2d; }
+	}
+
+	@include media($lg){ 
+		&__item{ margin-right: 25px; font-size: 16px; }
+		&__call{ font-size: 16px; }
+	}
+
+	@include media(1200px){
+		&__item{
+			//&--mail{ display: none; }
+		}
+	} 
+
+	@include media($md){
+		//&__item{ font-size: 19px; }
+		//&__call{ font-size: 19px; }
+
+		&--footer &{
+			&__item{ margin: 0 0 25px; 
+				&:last-child{ margin: 0; }
+			}
+		}
+	}
+
+	@include media($sm){
+		&__call{ display: none; }
+	}
+
+	@include media($xs){  @include flex(space-between,center,center);
+		&__item{ font-size: 16px; margin: 0; 
+			//&--city{ display: none; }
+		}
+		&__call{ display: none; font-size: 16px; }
+
+		&--footer{ display: block;}
+	}
+
+	@include media($xxs){
+		&__item{ font-size: 14px; }
+	}
+}

@@ -1,0 +1,83 @@
+
+$title-h1: bold 46px/1 $family;
+$title-h2: bold 32px/1 $family; 
+$title-h3: bold 26px $family;
+$title-h4: bold 24px $family; // ?
+$title-h5: bold 18px $family; // ?
+
+$title-h1-lg: bold 40px/1 $family;
+$title-h2-lg: bold 28px/1 $family; 
+$title-h3-lg: bold 24px $family;
+$title-h4-lg: bold 20px $family; // ?
+$title-h5-lg: bold 18px $family; // ?
+
+$title-h1-sm: bold 36px/1 $family; 
+$title-h2-sm: bold 24px/1 $family;
+$title-h3-sm: bold 20px $family;
+$title-h4-sm: bold 18px $family; //!
+$title-h5-sm: bold 16px $family; //!
+
+$title-h1-xs: bold 30px/1 $family; 
+$title-h2-xs: bold 20/1 $family;
+$title-h3-xs: bold 18px $family;
+$title-h4-xs: bold 16px $family; //!
+$title-h5-xs: bold 14px $family; //!
+
+
+$title-color: #373137;
+
+h1, .title-h1{ font: $title-h1; color: $title-color; margin: 0 0 25px 0; 
+	@include media($lg){
+		font: $title-h1-lg;
+	}
+	@include media($sm){
+		font: $title-h1-sm;
+	}
+	@include media($xs){
+		font: $title-h1-xs;
+	}
+}
+h2, .title-h2{ font: $title-h2; color: $title-color; margin: 0 0 20px 0;
+	@include media($lg){
+		font: $title-h2-lg;
+	}
+	@include media($sm){
+		font: $title-h2-sm;
+	}
+	@include media($xs){
+		font: $title-h2-xs;
+	}
+}
+h3, .title-h3{ font: $title-h3; color: $title-color; margin: 0 0 15px 0; 
+	@include media($lg){
+		font: $title-h3-lg;
+	}
+	@include media($sm){
+		font: $title-h3-sm;
+	}
+	@include media($xs){
+		font: $title-h3-xs;
+	}
+}
+h4, .title-h4{ font: $title-h4; color: $title-color; margin: 0 0 15px 0; 
+	@include media($lg){
+		font: $title-h4-lg;
+	}
+	@include media($sm){
+		font: $title-h4-sm;
+	}
+	@include media($xs){
+		font: $title-h4-xs;
+	}
+}
+h5, .title-h5{ font: $title-h5; color: $title-color; margin: 0 0 15px 0;
+	@include media($lg){
+		font: $title-h5-lg;
+	}
+	@include media($sm){
+		font: $title-h5-sm;
+	}
+	@include media($xs){
+		font: $title-h5-xs;
+	}
+}

@@ -1,0 +1,25 @@
+
+.burger{ text-decoration: none; cursor: pointer; position: relative; z-index: 9998; @include flex(0,center,center,nowrap);
+	&__lines{ text-decoration: none; margin-right: 15px;
+		span{display: block; width: 24px; height: 4px; margin: 0 0 5px; background: $black; position: relative; @include time(); @include brs(2px);
+			&:last-child{margin: 0;}
+		}
+	}
+	&__label{ color: #3a353a; font: 20px/1 $family; }
+
+	&.active &{
+		&__lines{
+			span:nth-of-type(2){ opacity: 0; }
+			span:first-child{ bottom: -9px;
+				transform: rotate(45deg);
+			}
+			span:last-child{ top: -9px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	@include media($xs){
+		&__label{ font: 16px/1 $family; }
+	}
+}

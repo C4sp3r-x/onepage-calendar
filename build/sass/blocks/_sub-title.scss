@@ -1,0 +1,13 @@
+
+.sub-title{ @include flex(0,center,center,nowrap); font: bold 26px $family; margin-bottom: 15px; 
+	&__icon{ width: 35px; height: 35px;  @include background-image(linear-gradient(to right, $pink-dark, $pink-light)); margin-right: 15px; @include flex(center,center,center);
+		svg{ transform: rotate(-90deg); fill: $white; stroke: $white; width: 17px; height: 11px; }
+	}
+
+	@include media($md){
+		font: bold 24px $family; 
+	}
+	@include media($xs){
+		font: bold 20px $family; 
+	}
+}

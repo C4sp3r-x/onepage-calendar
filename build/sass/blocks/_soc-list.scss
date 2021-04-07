@@ -1,0 +1,33 @@
+
+.soc-list{ @include flex(0,center,center,wrap); margin-bottom: -15px;
+	&__item{ margin: 0 15px 15px 0;
+		&:last-child{ margin-right: 0; } 
+
+		a{ @include flex(center,center,center); width: 34px; height: 34px; border-radius: 50%; border: 1px #e9e9e9 solid; @include time();
+			&:hover{ border-color: #fb6c75; }
+		}
+		img{ display: block; }
+		svg{ width: 20px; height: 20px; fill: url(#soc-gradient) #447799; }
+	}
+	&--center{ @include flex(center,center,center); 
+		.soc-list__item{ margin: 0 7px 15px; }
+	}
+	&--right{ @include flex(flex-end, center,center,nowrap); 
+		.soc-list__item{ margin: 0 0 0 2rem; }
+	}
+
+	
+
+	@include media($lg){
+		
+	}
+
+	@include media($sm){
+		
+	}
+	@include media($xs){
+		&--center{
+			.soc-list__item{ margin: 0 4px 15px; }
+		}
+	}
+}
